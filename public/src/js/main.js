@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Main JS loaded");
   console.log("isLoggedIn:", isLoggedIn);
   console.log("Path:", path); // ✅ now in scope
-
-  console.log("test ....");
+  console.log(path.endsWith("/home.html"), "...");
   // 🔒 Protect home.html
   if (path.endsWith("/home.html")) {
     if (!isLoggedIn) {
       window.location.href = "index.html";
     } else if (isLoggedIn == true) {
+      console.log("test ....");
       const app = document.getElementById("app");
       if (app) {
         app.classList.remove("hidden");
@@ -38,5 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     }
+  } else {
+    console.log("no path matched");
   }
 });

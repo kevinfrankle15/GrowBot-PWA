@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("isLoggedIn:", isLoggedIn);
   console.log("Path:", path); // ✅ now in scope
 
+  console.log("test ....");
   // 🔒 Protect home.html
   if (path.endsWith("/home.html")) {
     if (!isLoggedIn) {
       window.location.href = "index.html";
     } else if (isLoggedIn == true) {
-      console.log("test ....");
       const app = document.getElementById("app");
       if (app) {
         app.classList.remove("hidden");

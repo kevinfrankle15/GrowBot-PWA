@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isLoggedIn) {
       window.location.href = "index.html";
     } else if (isLoggedIn == true) {
+      console.log("test ....");
       const app = document.getElementById("app");
       if (app) {
         app.classList.remove("hidden");

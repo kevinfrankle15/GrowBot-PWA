@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Path:", path); // ✅ now in scope
 
   // 🔒 Protect home.html
-  if (path.endsWith("/home")) {
+  if (path.endsWith("/home.html")) {
     if (!isLoggedIn) {
       window.location.href = "index.html";
     } else if (isLoggedIn == true) {
